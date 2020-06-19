@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    color: "white",
   },
 }));
 
@@ -30,6 +31,25 @@ function App() {
   return (
     <>
       <Back />
+      <Grid
+        justify="center"
+        alignItems="center"
+        container
+        className={classes.home}
+      >
+        <Grid item>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h2" className={classes.deadCenterColumn}>
+              <div>
+                Hi, I'm{" "}
+                <span style={{ color: "#e31b6d" }}>Samuel Greenwald.</span>
+              </div>
+              <div>I'm a full stack web developer.</div>
+            </Typography>
+          </ThemeProvider>
+        </Grid>
+      </Grid>
+
       <Grid
         justify="center"
         alignItems="center"
