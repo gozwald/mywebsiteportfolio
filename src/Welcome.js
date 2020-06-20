@@ -8,6 +8,7 @@ import {
   ThemeProvider,
   responsiveFontSizes,
 } from "@material-ui/core/styles";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   home: {
@@ -53,7 +54,11 @@ const Welcome = () => {
           </ThemeProvider>
 
           <div className={classes.deadCenterRow}>
-            <span className="ghost-button-semi-transparent">VIEW MY WORK</span>
+            <Link to="about" spy={true} smooth={true} duration={500}>
+              <span className="ghost-button-semi-transparent">
+                VIEW MY WORK
+              </span>
+            </Link>
           </div>
         </Grid>
       </Grid>

@@ -62,9 +62,8 @@ li.slider {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #e74c3c;
   z-index: 8;
-  transition: left 0.4s, background-color 0.4s;
+  /* transition: left 0.4s, background-color 0.4s; */
 }
 .menu li:nth-child(1):hover ~ .slider,
 .menu li:nth-child(1):focus ~ .slider,

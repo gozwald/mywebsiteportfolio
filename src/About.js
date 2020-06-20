@@ -34,23 +34,21 @@ theme = responsiveFontSizes(theme);
 const About = () => {
   const classes = useStyles();
   return (
-    <>
-      <Grid
-        justify="center"
-        alignItems="center"
-        container
-        className={classes.home}
-      >
-        <Grid item>
-          <ThemeProvider theme={theme}>
-            <Typography variant="h2" className={classes.deadCenterColumn}>
-              <div>Hi, I'm Samuel Greenwald.</div>
-              <div>I'm a full stack web developer.</div>
-            </Typography>
-          </ThemeProvider>
-        </Grid>
+    <Grid
+      justify="center"
+      alignItems="center"
+      container
+      className={classes.home}
+    >
+      <Grid item name="about">
+        <ThemeProvider theme={theme}>
+          <Typography variant="h2" className={classes.deadCenterColumn}>
+            <div>Hi, I'm Samuel Greenwald.</div>
+            <div>I'm a full stack web developer.</div>
+          </Typography>
+        </ThemeProvider>
       </Grid>
-    </>
+    </Grid>
   );
 };
 
