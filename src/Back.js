@@ -1,7 +1,5 @@
 import React from "react";
 import Particles from "react-particles-js";
-// import Particles from 'react-tsparticles';
-import "./App.css";
 
 function Back() {
   return (
@@ -33,11 +31,6 @@ function Back() {
             },
             polygon: {
               nb_sides: 5,
-            },
-            image: {
-              src: "img/github.svg",
-              width: 100,
-              height: 100,
             },
           },
           opacity: {
@@ -83,10 +76,10 @@ function Back() {
           },
         },
         interactivity: {
-          detect_on: "canvas",
+          detect_on: "window",
           events: {
             onhover: {
-              enable: true,
+              enable: false,
               mode: "bubble",
             },
             onclick: {
