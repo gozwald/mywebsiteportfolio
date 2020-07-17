@@ -27,14 +27,14 @@ const useStyles = makeStyles((theme) => ({
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
-const About = () => {
+const Contact = () => {
   const classes = useStyles();
   return (
     <Grid justify="center" alignItems="center" container>
       <Grid item xs={12} name="about" style={{ padding: "15vh" }}>
         <ThemeProvider theme={theme}>
           <Typography variant="h2" className={classes.deadCenterColumn}>
-            <div>About</div>
+            <div>Contact</div>
             <div>¯¯¯</div>
           </Typography>
         </ThemeProvider>
@@ -43,4 +43,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;

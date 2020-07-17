@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = ({ home, about, projects, contacts }) => {
+  console.log(about);
   return (
     <>
       <ul className="menu">
@@ -18,7 +18,7 @@ const Navbar = ({ home, about, projects, contacts }) => {
         </li>
         <li>
           <a href="#" className={projects ? "active" : ""}>
-            Portfolio
+            Projects
           </a>
         </li>
         <li>
