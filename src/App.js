@@ -1,65 +1,94 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Welcome from "./Welcome";
 import Navbar from "./Navbar";
 import About from "./About";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import Back from "./Back";
-import VizSensor from "react-visibility-sensor";
+import { InView } from "react-intersection-observer";
 
 const App = () => {
   const [home, setHome] = useState(false);
   const [about, setAbout] = useState(false);
-  const [portfolio, setPortfolio] = useState(false);
   const [contact, setContact] = useState(false);
   const [projects, setProjects] = useState(false);
-  const [contacts, setContacts] = useState(false);
+
+  const THRESHOLD = [1]; // Store multiple thresholds in a constant
+
+  // useEffect(() => {
+  //   document.addEventListener("scroll", () => {
+  //     const scrollCheck = window.scrollY;
+  //     console.log(scrollCheck);
+  //   });
+  // });
+
+  const handleWelcome = (e) => {
+    if (e) {
+      setHome(true);
+      setProjects(false);
+      setAbout(false);
+      setContact(false);
+    }
+  };
+
+  const handleAbout = (e) => {
+    if (e) {
+      setAbout(true);
+      setHome(false);
+      setProjects(false);
+      setContact(false);
+    }
+  };
+
+  const handleProjects = (e) => {
+    if (e) {
+      console.log("projects visible");
+      setProjects(true);
+      setHome(false);
+      setAbout(false);
+      setContact(false);
+    }
+  };
+
+  const handleContact = (e) => {
+    if (e) {
+      setContact(true);
+      setProjects(false);
+      setHome(false);
+      setAbout(false);
+    }
+  };
 
   return (
     <>
       <Back />
-      <VizSensor
-        partialVisibility
-        offset={{ top: 590 }}
-        onChange={(isVisible) => {
-          setHome(isVisible);
-        }}
-      >
-        <Welcome />
-      </VizSensor>
-      <Navbar
-        about={about}
-        home={home}
-        portfolio={portfolio}
-        contact={contact}
+      <InView
+        rootMargin="100px"
+        threshold={THRESHOLD}
+        onChange={(e, entry) => handleWelcome(e)}
       />
-      <VizSensor
-        partialVisibility
-        offset={{ bottom: 110 }}
-        onChange={(isVisible) => {
-          setAbout(isVisible);
-        }}
-      >
-        <About />
-      </VizSensor>
-      <VizSensor
-        partialVisibility
-        offset={{ bottom: 110 }}
-        onChange={(isVisible) => {
-          setAbout(isVisible);
-        }}
-      >
-        <Projects />
-      </VizSensor>
-      <VizSensor
-        partialVisibility
-        offset={{ bottom: 110 }}
-        onChange={(isVisible) => {
-          setAbout(isVisible);
-        }}
-      >
-        <Contact />
-      </VizSensor>
+      <Welcome />
+
+      <Navbar about={about} home={home} projects={projects} contact={contact} />
+      <InView
+        rootMargin="-200px"
+        threshold={THRESHOLD}
+        onChange={(e, entry) => handleAbout(e)}
+      />
+      <About />
+      <InView
+        rootMargin="-200px"
+        threshold={THRESHOLD}
+        onChange={(e, entry) => handleProjects(e)}
+      />
+      <Projects />
+
+      <InView
+        rootMargin="-200px"
+        threshold={THRESHOLD}
+        onChange={(e, entry) => handleContact(e)}
+      />
+      <Contact />
     </>
   );
 };

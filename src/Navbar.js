@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
 
-const Navbar = ({ home, about, projects, contacts }) => {
-  console.log(about);
+const Navbar = ({ home, about, projects, contact }) => {
   return (
     <>
       <ul className="menu">
@@ -22,7 +21,7 @@ const Navbar = ({ home, about, projects, contacts }) => {
           </a>
         </li>
         <li>
-          <a href="#" className={contacts ? "active" : ""}>
+          <a href="#" className={contact ? "active" : ""}>
             Contact
           </a>
         </li>

@@ -34,7 +34,7 @@ const Projects = () => {
       <Grid item xs={12} name="about" style={{ padding: "15vh" }}>
         <ThemeProvider theme={theme}>
           <Typography variant="h2" className={classes.deadCenterColumn}>
-            <div>Portfolio</div>
+            <div>Projects</div>
             <div>¯¯¯</div>
           </Typography>
         </ThemeProvider>
