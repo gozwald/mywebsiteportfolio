@@ -42,7 +42,6 @@ const App = () => {
 
   const handleProjects = (e) => {
     if (e) {
-      console.log("projects visible");
       setProjects(true);
       setHome(false);
       setAbout(false);
@@ -62,32 +61,19 @@ const App = () => {
   return (
     <>
       <Back />
-      <InView
-        rootMargin="100px"
-        threshold={THRESHOLD}
-        onChange={(e, entry) => handleWelcome(e)}
-      />
+      <InView threshold={THRESHOLD} onChange={(e, entry) => handleWelcome(e)} />
       <Welcome />
 
       <Navbar about={about} home={home} projects={projects} contact={contact} />
-      <InView
-        rootMargin="-200px"
-        threshold={THRESHOLD}
-        onChange={(e, entry) => handleAbout(e)}
-      />
+      <InView threshold={THRESHOLD} onChange={(e, entry) => handleAbout(e)} />
       <About />
       <InView
-        rootMargin="-200px"
         threshold={THRESHOLD}
         onChange={(e, entry) => handleProjects(e)}
       />
       <Projects />
 
-      <InView
-        rootMargin="-200px"
-        threshold={THRESHOLD}
-        onChange={(e, entry) => handleContact(e)}
-      />
+      <InView threshold={THRESHOLD} onChange={(e, entry) => handleContact(e)} />
       <Contact />
     </>
   );

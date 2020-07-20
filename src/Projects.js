@@ -36,6 +36,14 @@ const Projects = () => {
           <Typography variant="h2" className={classes.deadCenterColumn}>
             <div>Projects</div>
             <div>¯¯¯</div>
+            <div>Projects</div>
+            <div>¯¯¯</div>
+            <div>Projects</div>
+            <div>¯¯¯</div>
+            <div>Projects</div>
+            <div>¯¯¯</div>
+            <div>Projects</div>
+            <div>¯¯¯</div>
           </Typography>
         </ThemeProvider>
       </Grid>
