@@ -8,6 +8,7 @@ import {
   ThemeProvider,
   responsiveFontSizes,
 } from "@material-ui/core/styles";
+import { InView } from "react-intersection-observer";
 
 const useStyles = makeStyles(() => ({
   deadCenterColumn: {
@@ -80,14 +81,22 @@ const About = () => {
               className={classes.deadCenterColumn}
               style={{ width: "100%" }}
             >
-              <div class="skillscontainer">
-                <ul>
-                  <li class="html">HTML</li>
-                  <li class="css">CSS</li>
-                  <li class="js">JavaScript</li>
-                  <li class="ng">Angular</li>
-                </ul>
-              </div>
+              <InView>
+                {({ inView, ref, entry }) => (
+                  <div ref={ref}>
+                    {inView && (
+                      <div class="skillscontainer">
+                        <ul>
+                          <li class="html">HTML</li>
+                          <li class="css">CSS</li>
+                          <li class="js">JavaScript</li>
+                          <li class="ng">Angular</li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </InView>
             </Typography>
           </ThemeProvider>
         </Grid>
