@@ -49,7 +49,7 @@ const About = () => {
       <Grid container item xs={10} style={{ paddingBottom: "6vh" }}>
         <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
           <img
-            width="60%"
+            width="40%"
             alt="me"
             src="/images/draw.png"
             style={{ paddingBottom: "2vh" }}
@@ -60,7 +60,7 @@ const About = () => {
         </Grid>
         <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
           <img
-            width="60%"
+            width="40%"
             alt="me"
             src="/images/search.png"
             style={{ paddingBottom: "2vh" }}
@@ -71,7 +71,7 @@ const About = () => {
         </Grid>
         <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
           <img
-            width="60%"
+            width="40%"
             alt="me"
             src="/images/idea.png"
             style={{ paddingBottom: "2vh" }}
@@ -82,7 +82,7 @@ const About = () => {
         </Grid>
         <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
           <img
-            width="60%"
+            width="40%"
             alt="me"
             src="/images/agreement.png"
             style={{ paddingBottom: "2vh" }}
@@ -96,7 +96,7 @@ const About = () => {
         <Grid container item xs={4}>
           <div className={classes.deadCenterColumn}>
             <img
-              width="80%"
+              width="60%"
               alt="me"
               src="/images/me.webp"
               style={{ paddingBottom: "3vh" }}
