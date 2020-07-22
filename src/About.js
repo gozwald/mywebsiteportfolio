@@ -9,7 +9,6 @@ import {
   responsiveFontSizes,
 } from "@material-ui/core/styles";
 import { InView } from "react-intersection-observer";
-import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles(() => ({
   deadCenterColumn: {
@@ -47,16 +46,54 @@ const About = () => {
           </Typography>
         </ThemeProvider>
       </Grid>
+      <Grid container item xs={10} style={{ paddingBottom: "6vh" }}>
+        <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
+          <img
+            width="60%"
+            alt="me"
+            src="/images/draw.png"
+            style={{ paddingBottom: "2vh" }}
+          />
+          <div>Detail Oriented</div>
+        </Grid>
+        <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
+          <img
+            width="60%"
+            alt="me"
+            src="/images/search.png"
+            style={{ paddingBottom: "2vh" }}
+          />
+          <div>Resourceful</div>
+        </Grid>
+        <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
+          <img
+            width="60%"
+            alt="me"
+            src="/images/idea.png"
+            style={{ paddingBottom: "2vh" }}
+          />
+          <div>Analytical</div>
+        </Grid>
+        <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
+          <img
+            width="60%"
+            alt="me"
+            src="/images/agreement.png"
+            style={{ paddingBottom: "2vh" }}
+          />
+          <div>Team Player</div>
+        </Grid>
+      </Grid>
       <Grid container item xs={11}>
         <Grid container item xs={4}>
           <div className={classes.deadCenterColumn}>
             <img
               width="80%"
-              component="img"
               alt="me"
               src="/images/me.webp"
               style={{ paddingBottom: "3vh" }}
             />
+
             <Typography variant="h4" className={classes.deadCenterColumn}>
               What is this human?
             </Typography>
