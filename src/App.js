@@ -13,7 +13,7 @@ const App = () => {
   const [contact, setContact] = useState(false);
   const [projects, setProjects] = useState(false);
 
-  const THRESHOLD = [1]; // Store multiple thresholds in a constant
+  const THRESHOLD = [0.5]; // Store multiple thresholds in a constant
 
   // useEffect(() => {
   //   document.addEventListener("scroll", () => {
@@ -25,9 +25,7 @@ const App = () => {
   const handleWelcome = (e) => {
     if (e) {
       setHome(true);
-      setProjects(false);
       setAbout(false);
-      setContact(false);
     }
   };
 
@@ -36,16 +34,14 @@ const App = () => {
       setAbout(true);
       setHome(false);
       setProjects(false);
-      setContact(false);
     }
   };
 
   const handleProjects = (e) => {
     if (e) {
       setProjects(true);
-      setHome(false);
-      setAbout(false);
       setContact(false);
+      setAbout(false);
     }
   };
 
@@ -53,28 +49,27 @@ const App = () => {
     if (e) {
       setContact(true);
       setProjects(false);
-      setHome(false);
-      setAbout(false);
     }
   };
 
   return (
     <>
       <Back />
-      <InView threshold={THRESHOLD} onChange={(e, entry) => handleWelcome(e)} />
-      <Welcome />
+      <InView threshold={THRESHOLD} onChange={(e, entry) => handleWelcome(e)}>
+        <Welcome />
+      </InView>
 
       <Navbar about={about} home={home} projects={projects} contact={contact} />
-      <InView threshold={THRESHOLD} onChange={(e, entry) => handleAbout(e)} />
-      <About />
-      <InView
-        threshold={THRESHOLD}
-        onChange={(e, entry) => handleProjects(e)}
-      />
-      <Projects />
 
-      <InView threshold={THRESHOLD} onChange={(e, entry) => handleContact(e)} />
-      <Contact />
+      <InView threshold={THRESHOLD} onChange={(e, entry) => handleAbout(e)}>
+        <About />
+      </InView>
+      <InView threshold={THRESHOLD} onChange={(e, entry) => handleProjects(e)}>
+        <Projects />
+      </InView>
+      <InView threshold={THRESHOLD} onChange={(e, entry) => handleContact(e)}>
+        <Contact />
+      </InView>
     </>
   );
 };
