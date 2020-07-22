@@ -54,7 +54,9 @@ const About = () => {
             src="/images/draw.png"
             style={{ paddingBottom: "2vh" }}
           />
-          <div>Detail Oriented</div>
+          <div>
+            <b>Detail Oriented</b>
+          </div>
         </Grid>
         <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
           <img
@@ -63,7 +65,9 @@ const About = () => {
             src="/images/search.png"
             style={{ paddingBottom: "2vh" }}
           />
-          <div>Resourceful</div>
+          <div>
+            <b>Resourceful</b>
+          </div>
         </Grid>
         <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
           <img
@@ -72,7 +76,9 @@ const About = () => {
             src="/images/idea.png"
             style={{ paddingBottom: "2vh" }}
           />
-          <div>Analytical</div>
+          <div>
+            <b>Analytical</b>
+          </div>
         </Grid>
         <Grid item md={3} xs={6} className={classes.deadCenterColumn}>
           <img
@@ -81,7 +87,9 @@ const About = () => {
             src="/images/agreement.png"
             style={{ paddingBottom: "2vh" }}
           />
-          <div>Team Player</div>
+          <div>
+            <b>Team Player</b>
+          </div>
         </Grid>
       </Grid>
       <Grid container item xs={11}>
