@@ -192,47 +192,44 @@ li.slider {
   }
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  height: 40vh;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.bg,
+.overlay {
   text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+img,
+.overlay {
+  transition: 0.3s all;
+  border-radius: 3px;
 }
-
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
+.bg {
+  width: 100%;
+  position: relative;
+}
+.bg img {
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
 }
-
-/* Style the front side (fallback if image is missing) */
-/* .flip-card-front {
-  background-color: #bbb;
-  color: black;
-} */
-
-/* Style the back side */
-.flip-card-back {
-  background-color: white;
-  color: black;
-  transform: rotateY(180deg);
+.bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  opacity: 0;
+}
+.bg .overlay h2 {
+  padding-top: 20%;
+  font-family: "Droid Serif", serif;
+}
+.bg .overlay p {
+  font-family: "Julius Sans One", sans-serif;
+}
+.bg:hover .overlay {
+  opacity: 1;
+}
+.bg:hover img {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
 }

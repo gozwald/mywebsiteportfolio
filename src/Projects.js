@@ -10,7 +10,10 @@ import {
 } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const useStyles = makeStyles((theme) => ({
   deadCenterColumn: {
@@ -25,6 +28,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     textAlign: "center",
   },
+  gridspacing: {
+    padding: "10px",
+  },
+  cardprop: {
+    display: "flex",
+    height: "35vh",
+    width: "100%",
+  },
 }));
 
 let theme = createMuiTheme();
@@ -33,7 +44,7 @@ theme = responsiveFontSizes(theme);
 const Projects = () => {
   const classes = useStyles();
   return (
-    <Grid name="projects" style={{ padding: "15vh" }}>
+    <Grid name="projects" style={{ padding: "10vh" }}>
       <ThemeProvider theme={theme}>
         <Grid item xs={12}>
           <Typography variant="h2" className={classes.deadCenterColumn}>
@@ -42,114 +53,85 @@ const Projects = () => {
           </Typography>
         </Grid>
 
-        <Grid
-          container
-          item
-          xs={12}
-          style={{ padding: "0px 8vw" }}
-          className={classes.deadCenterRow}
-        >
-          <Grid style={{ padding: "3px" }} item xs={4}>
-            <Card>
-              <CardActionArea>
-                <div class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <img
-                        src="/images/idea.png"
-                        alt="Avatar"
-                        style={{ width: "100%", height: "100%" }}
-                      />
-                    </div>
-                    <div class="flip-card-back">
-                      <h1>John Doe</h1>
-                      <p>Architect & Engineer</p>
-                      <p>We love that guy</p>
-                    </div>
+        <Grid container item xs={12} className={classes.deadCenterRow}>
+          <Grid className={classes.gridspacing} item xs={4}>
+            <div data-aos="fade-up">
+              <Card className={classes.cardprop}>
+                <div class="bg">
+                  <img src="/images/konami.gif" alt="" />
+                  <div class="overlay">
+                    <h2>Check This Out!</h2>
+                    <p>this is some text.</p>
                   </div>
                 </div>
-              </CardActionArea>
-            </Card>
+              </Card>
+            </div>
           </Grid>
-          <Grid style={{ padding: "3px" }} item xs={4}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </CardContent>
-              </CardActionArea>
-            </Card>
+          <Grid className={classes.gridspacing} item xs={4}>
+            <div data-aos="fade-up">
+              <Card className={classes.cardprop}>
+                <div class="bg">
+                  <img src="/images/cookbook.png" alt="" />
+                  <div class="overlay">
+                    <h2>Check This Out!</h2>
+                    <p>this is some text.</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </Grid>
-          <Grid style={{ padding: "3px" }} item xs={4}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </CardContent>
-              </CardActionArea>
-            </Card>
+          <Grid className={classes.gridspacing} item xs={4}>
+            <div data-aos="fade-up">
+              <Card className={classes.cardprop}>
+                <div class="bg">
+                  <img src="/images/revyou.png" alt="" />
+                  <div class="overlay">
+                    <h2>Check This Out!</h2>
+                    <p>this is some text.</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </Grid>
-          <Grid style={{ padding: "3px" }} item xs={4}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </CardContent>
-              </CardActionArea>
-            </Card>
+
+          <Grid className={classes.gridspacing} item xs={4}>
+            <div data-aos="fade-up">
+              <Card className={classes.cardprop}>
+                <div class="bg">
+                  <img src="/images/skoli.png" alt="" />
+                  <div class="overlay">
+                    <h2>Check This Out!</h2>
+                    <p>this is some text.</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </Grid>
-          <Grid style={{ padding: "3px" }} item xs={4}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </CardContent>
-              </CardActionArea>
-            </Card>
+          <Grid className={classes.gridspacing} item xs={4}>
+            <div data-aos="fade-up">
+              <Card className={classes.cardprop}>
+                <div class="bg">
+                  <img src="/images/videoplayer.png" alt="" />
+                  <div class="overlay">
+                    <h2>Check This Out!</h2>
+                    <p>this is some text.</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </Grid>
-          <Grid style={{ padding: "3px" }} item xs={4}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid style={{ padding: "3px" }} item xs={4}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid style={{ padding: "3px" }} item xs={4}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid style={{ padding: "3px" }} item xs={4}>
-            <Card>
-              <CardActionArea>
-                <CardContent>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </CardContent>
-              </CardActionArea>
-            </Card>
+          <Grid className={classes.gridspacing} item xs={4}>
+            <div data-aos="fade-up">
+              <Card className={classes.cardprop}>
+                <div class="bg">
+                  <img src="/images/lovit19.png" alt="" />
+                  <div class="overlay">
+                    <h2>Check This Out!</h2>
+                    <p>this is some text.</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </Grid>
         </Grid>
       </ThemeProvider>
