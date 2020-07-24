@@ -15,13 +15,6 @@ const App = () => {
 
   const THRESHOLD = [0.5]; // Store multiple thresholds in a constant
 
-  // useEffect(() => {
-  //   document.addEventListener("scroll", () => {
-  //     const scrollCheck = window.scrollY;
-  //     console.log(scrollCheck);
-  //   });
-  // });
-
   const handleWelcome = (e) => {
     if (e) {
       setHome(true);
