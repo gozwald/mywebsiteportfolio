@@ -6,22 +6,22 @@ const Navbar = ({ home, about, projects, contact }) => {
     <>
       <ul className="menu">
         <li>
-          <a href="#" className={home ? "active" : ""}>
+          <a href="#home" className={home ? "active" : ""}>
             Home
           </a>
         </li>
         <li>
-          <a href="#" className={about ? "active" : ""}>
+          <a href="#about" className={about ? "active" : ""}>
             About
           </a>
         </li>
         <li>
-          <a href="#" className={projects ? "active" : ""}>
+          <a href="#projects" className={projects ? "active" : ""}>
             Projects
           </a>
         </li>
         <li>
-          <a href="#" className={contact ? "active" : ""}>
+          <a href="#contact" className={contact ? "active" : ""}>
             Contact
           </a>
         </li>

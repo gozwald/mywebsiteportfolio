@@ -198,7 +198,7 @@ li.slider {
 }
 img,
 .overlay {
-  transition: 0.3s all;
+  transition: 0.7s all;
   border-radius: 3px;
 }
 .bg {
@@ -215,21 +215,24 @@ img,
   left: 0;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.411);
   color: #fff;
   opacity: 0;
 }
-.bg .overlay h2 {
-  padding-top: 20%;
-  font-family: "Droid Serif", serif;
+
+.backcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
 }
-.bg .overlay p {
-  font-family: "Julius Sans One", sans-serif;
-}
+
 .bg:hover .overlay {
   opacity: 1;
 }
 .bg:hover img {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
 }

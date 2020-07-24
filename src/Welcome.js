@@ -8,9 +8,9 @@ import {
   ThemeProvider,
   responsiveFontSizes,
 } from "@material-ui/core/styles";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   home: {
     height: "100vh",
   },

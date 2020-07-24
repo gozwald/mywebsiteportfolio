@@ -9,10 +9,8 @@ import {
   responsiveFontSizes,
 } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 AOS.init();
 
 const useStyles = makeStyles((theme) => ({
@@ -60,8 +58,18 @@ const Projects = () => {
                 <div class="bg">
                   <img src="/images/konami.gif" alt="" />
                   <div class="overlay">
-                    <h2>Check This Out!</h2>
-                    <p>this is some text.</p>
+                    <div className="backcontainer">
+                      <div>
+                        <b>Konami Code!</b>
+                      </div>
+                      <br></br>
+                      <div>Technologies:</div>
+                      <div>Javascript</div>
+                      <div>HTML / CSS</div>
+                      <br></br>
+                      <div>Github Repo:</div>
+                      <div>https://github.com/gozwald/konami</div>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -73,8 +81,18 @@ const Projects = () => {
                 <div class="bg">
                   <img src="/images/cookbook.png" alt="" />
                   <div class="overlay">
-                    <h2>Check This Out!</h2>
-                    <p>this is some text.</p>
+                    <div className="backcontainer">
+                      <div>
+                        <b>Epic Cookbook</b>
+                      </div>
+                      <br></br>
+                      <div>Technologies:</div>
+                      <div>Javascript</div>
+                      <div>HTML / CSS</div>
+                      <br></br>
+                      <div>Github Repo:</div>
+                      <div>https://github.com/gozwald/CookBook</div>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -86,8 +104,19 @@ const Projects = () => {
                 <div class="bg">
                   <img src="/images/revyou.png" alt="" />
                   <div class="overlay">
-                    <h2>Check This Out!</h2>
-                    <p>this is some text.</p>
+                    <div className="backcontainer">
+                      <div>
+                        <b>Revyou (Chrome Extension)</b>
+                      </div>
+                      <br></br>
+                      <div>Technologies:</div>
+                      <div>Javascript</div>
+                      <div>Express (Node JS)</div>
+                      <div>HTML / CSS</div>
+                      <br></br>
+                      <div>Github Repo:</div>
+                      <div>https://github.com/gozwald/revyouBackend</div>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -100,8 +129,19 @@ const Projects = () => {
                 <div class="bg">
                   <img src="/images/skoli.png" alt="" />
                   <div class="overlay">
-                    <h2>Check This Out!</h2>
-                    <p>this is some text.</p>
+                    <div className="backcontainer">
+                      <div>
+                        <b>Skoliosis Organization</b>
+                      </div>
+                      <br></br>
+                      <div>Technologies:</div>
+                      <div>Javascript</div>
+                      <div>HTML / CSS</div>
+                      <div>Bootstrap</div>
+                      <br></br>
+                      {/* <div>Github Repo:</div>
+                    <div>https://github.com/gozwald/revyouBackend</div> */}
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -113,8 +153,19 @@ const Projects = () => {
                 <div class="bg">
                   <img src="/images/videoplayer.png" alt="" />
                   <div class="overlay">
-                    <h2>Check This Out!</h2>
-                    <p>this is some text.</p>
+                    <div className="backcontainer">
+                      <div>
+                        <b>Custom HTML5 Player</b>
+                      </div>
+                      <br></br>
+                      <div>Technologies:</div>
+                      <div>Javascript</div>
+                      <div>HTML / CSS</div>
+                      <div>React</div>
+                      <br></br>
+                      <div>Github Repo:</div>
+                      <div>https://github.com/gozwald/videoapp</div>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -126,8 +177,20 @@ const Projects = () => {
                 <div class="bg">
                   <img src="/images/lovit19.png" alt="" />
                   <div class="overlay">
-                    <h2>Check This Out!</h2>
-                    <p>this is some text.</p>
+                    <div className="backcontainer">
+                      <div>
+                        <b>Care Package Site</b>
+                      </div>
+                      <br></br>
+                      <div>Technologies:</div>
+                      <div>Javascript</div>
+                      <div>HTML / CSS</div>
+                      <div>React</div>
+                      <div>Express</div>
+                      <br></br>
+                      <div>Github Repo:</div>
+                      <div>https://github.com/gozwald/shopping_cms</div>
+                    </div>
                   </div>
                 </div>
               </Card>
