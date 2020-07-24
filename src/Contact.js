@@ -58,33 +58,43 @@ const Contact = () => {
             className={classes.deadCenterColumn}
           >
             <p>Something on your mind?</p>
+            <br></br>
           </Typography>
-          <div class="login-box">
-            <form>
-              <div class="user-box">
-                <input type="text" name="" required="" />
-                <label>Name</label>
-              </div>
-              <div class="user-box">
-                <input type="text" email="" required="" />
-                <label>email</label>
-              </div>
-              <div class="user-box">
-                <input />
-                <textarea
-                  name="textarea"
-                  style={{ width: "100%", height: "150px" }}
-                ></textarea>
-                <label>email</label>
-              </div>
-              <a href="dunno#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-              </a>
-            </form>
+          <div className={classes.deadCenterColumn}>
+            <div class="login-box">
+              <form>
+                <div class="user-box">
+                  <input type="text" name="" required="" />
+                  <label>Name</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" email="" required="" />
+                  <label>Email</label>
+                </div>
+                <div class="user-box">
+                  <textarea
+                    placeholder="Your message goes here!"
+                    name="textarea"
+                    style={{
+                      width: "100%",
+                      height: "150px",
+                      background: "#283948",
+                      color: "white",
+                      border: "none",
+                      padding: "10px",
+                      outline: "none",
+                    }}
+                  />
+                </div>
+                <a href="dunno#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Submit
+                </a>
+              </form>
+            </div>
           </div>
         </ThemeProvider>
       </Grid>
