@@ -35,6 +35,7 @@ const Contact = () => {
 
     fetch(
       "https://www.elformo.com/forms/01d802f1-d244-49e4-ae9f-143c153d0d92",
+      { mode: "no-cors" },
       {
         method: "POST",
         body: data,
