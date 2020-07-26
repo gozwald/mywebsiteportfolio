@@ -80,20 +80,21 @@ const Contact = () => {
           <div className={classes.deadCenterColumn}>
             <div class="login-box">
               {/* <form onSubmit={handleSubmit}> */}
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" method="POST">
+                <input type="hidden" name="form-name" value="contact" />
                 <div class="user-box">
                   <input type="text" id="name" name="name" required="" />
                   <label>Name</label>
                 </div>
                 <div class="user-box">
-                  <input type="text" id="email" name="email" required="" />
+                  <input type="email" id="email" name="email" required="" />
                   <label>Email</label>
                 </div>
                 <div class="user-box">
                   <textarea
                     id="comment"
                     placeholder="Your message goes here!"
-                    name="comment"
+                    name="message"
                     style={{
                       width: "100%",
                       height: "150px",
