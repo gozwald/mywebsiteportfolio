@@ -28,22 +28,22 @@ let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
 const Contact = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.target);
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.target);
 
-    fetch(
-      "https://www.elformo.com/forms/01d802f1-d244-49e4-ae9f-143c153d0d92",
-      {
-        mode: "no-cors",
-        method: "POST",
-        headers: {
-          "Content-type": "multipart/form-data; charset=UTF-8",
-        },
-        body: data,
-      }
-    );
-  };
+  //   fetch(
+  //     "https://www.elformo.com/forms/01d802f1-d244-49e4-ae9f-143c153d0d92",
+  //     {
+  //       mode: "no-cors",
+  //       method: "POST",
+  //       headers: {
+  //         "Content-type": "multipart/form-data; charset=UTF-8",
+  //       },
+  //       body: data,
+  //     }
+  //   );
+  // };
 
   const classes = useStyles();
   return (
@@ -79,7 +79,8 @@ const Contact = () => {
           </Typography>
           <div className={classes.deadCenterColumn}>
             <div class="login-box">
-              <form onSubmit={handleSubmit}>
+              {/* <form onSubmit={handleSubmit}> */}
+              <form name="contact" method="POST" data-netlify="true">
                 <div class="user-box">
                   <input type="text" id="name" name="name" required="" />
                   <label>Name</label>
