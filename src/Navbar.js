@@ -22,7 +22,7 @@ const Navbar = ({ home, about, projects, contact }) => {
           </Link>
         </li>
         <li>
-          <Link to="contact" spy={true} smooth={true} duration={500}>
+          <Link to="contactme" spy={true} smooth={true} duration={500}>
             <div className={contact ? "active" : ""}>Contact</div>
           </Link>
         </li>
