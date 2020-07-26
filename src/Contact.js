@@ -28,6 +28,20 @@ let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
 const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    console.log(data);
+
+    fetch(
+      "https://www.elformo.com/forms/01d802f1-d244-49e4-ae9f-143c153d0d92",
+      {
+        method: "POST",
+        body: data,
+      }
+    );
+  };
+
   const classes = useStyles();
   return (
     <Grid justify="center" alignItems="center" container>
@@ -62,17 +76,18 @@ const Contact = () => {
           </Typography>
           <div className={classes.deadCenterColumn}>
             <div class="login-box">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div class="user-box">
-                  <input type="text" name="" required="" />
+                  <input type="text" id="name " name="" required="" />
                   <label>Name</label>
                 </div>
                 <div class="user-box">
-                  <input type="text" email="" required="" />
+                  <input type="text" id="email" email="" required="" />
                   <label>Email</label>
                 </div>
                 <div class="user-box">
                   <textarea
+                    id="comment"
                     placeholder="Your message goes here!"
                     name="textarea"
                     style={{
@@ -86,13 +101,14 @@ const Contact = () => {
                     }}
                   />
                 </div>
-                <a href="dunno#">
+
+                <button className="submit" type="submit">
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
                   Submit
-                </a>
+                </button>
               </form>
             </div>
           </div>
