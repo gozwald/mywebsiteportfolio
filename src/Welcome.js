@@ -37,6 +37,7 @@ const Welcome = () => {
   return (
     <>
       <Grid
+        name="home"
         justify="center"
         alignItems="center"
         container
@@ -56,7 +57,7 @@ const Welcome = () => {
           <div className={classes.deadCenterRow}>
             <Link to="about" spy={true} smooth={true} duration={500}>
               <span className="ghost-button-semi-transparent">
-                VIEW MY WORK
+                LET'S GO DEEPER
               </span>
             </Link>
           </div>

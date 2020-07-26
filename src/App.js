@@ -19,6 +19,8 @@ const App = () => {
     if (e) {
       setHome(true);
       setAbout(false);
+      setProjects(false);
+      setContact(false);
     }
   };
 
@@ -27,11 +29,13 @@ const App = () => {
       setAbout(true);
       setHome(false);
       setProjects(false);
+      setContact(false);
     }
   };
 
   const handleProjects = (e) => {
     if (e) {
+      setHome(false);
       setProjects(true);
       setContact(false);
       setAbout(false);
@@ -41,7 +45,9 @@ const App = () => {
   const handleContact = (e) => {
     if (e) {
       setContact(true);
+      setHome(false);
       setProjects(false);
+      setAbout(false);
     }
   };
 

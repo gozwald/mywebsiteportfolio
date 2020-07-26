@@ -1,29 +1,30 @@
 import React from "react";
 import "./App.css";
+import { Link } from "react-scroll";
 
 const Navbar = ({ home, about, projects, contact }) => {
   return (
     <>
       <ul className="menu">
         <li>
-          <a href="#home" className={home ? "active" : ""}>
-            Home
-          </a>
+          <Link to="home" spy={true} smooth={true} duration={500}>
+            <div className={home ? "active" : ""}>Home</div>
+          </Link>
         </li>
         <li>
-          <a href="#about" className={about ? "active" : ""}>
-            About
-          </a>
+          <Link to="about" spy={true} smooth={true} duration={500}>
+            <div className={about ? "active" : ""}>About</div>
+          </Link>
         </li>
         <li>
-          <a href="#projects" className={projects ? "active" : ""}>
-            Projects
-          </a>
+          <Link to="projects" spy={true} smooth={true} duration={500}>
+            <div className={projects ? "active" : ""}>Projects</div>
+          </Link>
         </li>
         <li>
-          <a href="#contact" className={contact ? "active" : ""}>
-            Contact
-          </a>
+          <Link to="contact" spy={true} smooth={true} duration={500}>
+            <div className={contact ? "active" : ""}>Contact</div>
+          </Link>
         </li>
         <li className="slider"></li>
       </ul>

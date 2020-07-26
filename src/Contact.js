@@ -41,7 +41,7 @@ const Contact = () => {
       <Grid
         item
         xs={12}
-        name="about"
+        name="contact"
         style={{ padding: "15vh", background: "#2c3e50" }}
       >
         <ThemeProvider theme={theme}>
