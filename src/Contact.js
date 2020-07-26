@@ -31,7 +31,6 @@ const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
-    console.log(data);
 
     fetch(
       "https://www.elformo.com/forms/01d802f1-d244-49e4-ae9f-143c153d0d92",
@@ -79,18 +78,18 @@ const Contact = () => {
             <div class="login-box">
               <form onSubmit={handleSubmit}>
                 <div class="user-box">
-                  <input type="text" id="name " name="" required="" />
+                  <input type="text" id="name" name="name" required="" />
                   <label>Name</label>
                 </div>
                 <div class="user-box">
-                  <input type="text" id="email" email="" required="" />
+                  <input type="text" id="email" name="email" required="" />
                   <label>Email</label>
                 </div>
                 <div class="user-box">
                   <textarea
                     id="comment"
                     placeholder="Your message goes here!"
-                    name="textarea"
+                    name="comment"
                     style={{
                       width: "100%",
                       height: "150px",
@@ -103,7 +102,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <button className="submit" type="submit">
+                <button className="submit" type="submit" name="submit">
                   <span></span>
                   <span></span>
                   <span></span>
