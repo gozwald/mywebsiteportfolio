@@ -37,6 +37,7 @@ const Contact = () => {
       { mode: "no-cors" },
       {
         method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: data,
       }
     );
