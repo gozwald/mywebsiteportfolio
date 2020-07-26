@@ -37,12 +37,12 @@ const Contact = () => {
       {
         mode: "no-cors",
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: {
+          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+        },
         body: data,
       }
-    )
-      // .then((response) => response.json())
-      .then((data) => console.log(data));
+    );
   };
 
   const classes = useStyles();
