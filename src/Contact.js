@@ -47,12 +47,21 @@ const Contact = () => {
 
   const classes = useStyles();
   return (
-    <Grid justify="center" alignItems="center" container>
-      <Grid item xs={12} style={{ paddingTop: "15vh" }}>
+    <Grid container>
+      <Grid
+        item
+        xs={12}
+        style={{
+          paddingTop: "15vh",
+          display: "flex",
+        }}
+      >
         <img
-          src="./images/arrowdown.svg"
+          src="./images/arrowdown.webp"
           alt="downarrow"
-          style={{ width: "100%", verticalAlign: "bottom" }}
+          style={{
+            width: "100%",
+          }}
         />
       </Grid>
       <Grid
@@ -83,11 +92,11 @@ const Contact = () => {
               <form name="contact" method="POST">
                 <input type="hidden" name="form-name" value="contact" />
                 <div class="user-box">
-                  <input type="text" id="name" name="name" required="" />
+                  <input type="text" id="name" name="name" required />
                   <label>Name</label>
                 </div>
                 <div class="user-box">
-                  <input type="email" id="email" name="email" required="" />
+                  <input type="text" id="email" name="email" required />
                   <label>Email</label>
                 </div>
                 <div class="user-box">
