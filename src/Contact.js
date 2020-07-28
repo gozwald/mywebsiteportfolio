@@ -8,6 +8,9 @@ import {
   ThemeProvider,
   responsiveFontSizes,
 } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
 
 const useStyles = makeStyles((theme) => ({
   deadCenterColumn: {
@@ -22,28 +25,53 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     padding: "20px",
   },
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paper: {
+    background: "#ffe200",
+    border: "0px solid #000",
+    outline: "0",
+    borderRadius: "25px",
+  },
 }));
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
 const Contact = () => {
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const data = new FormData(event.target);
+  const [open, setOpen] = React.useState(false);
 
-  //   fetch(
-  //     "https://www.elformo.com/forms/01d802f1-d244-49e4-ae9f-143c153d0d92",
-  //     {
-  //       mode: "no-cors",
-  //       method: "POST",
-  //       headers: {
-  //         "Content-type": "multipart/form-data; charset=UTF-8",
-  //       },
-  //       body: data,
-  //     }
-  //   );
-  // };
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("https://personalportfoliobackend.herokuapp.com/email/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        name: e.target.name.value,
+        email: e.target.email.value,
+        message: e.target.message.value,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+    e.target.reset();
+    handleOpen();
+  };
 
   const classes = useStyles();
   return (
@@ -88,15 +116,13 @@ const Contact = () => {
           </Typography>
           <div className={classes.deadCenterColumn}>
             <div class="login-box">
-              {/* <form onSubmit={handleSubmit}> */}
-              <form name="contact" method="POST">
-                <input type="hidden" name="form-name" value="contact" />
+              <form name="contact" onSubmit={handleSubmit}>
                 <div class="user-box">
-                  <input type="text" id="name" name="name" required />
+                  <input type="text" name="name" required />
                   <label>Name</label>
                 </div>
                 <div class="user-box">
-                  <input type="text" id="email" name="email" required />
+                  <input type="email" name="email" required />
                   <label>Email</label>
                 </div>
                 <div class="user-box">
@@ -125,6 +151,35 @@ const Contact = () => {
                 </button>
               </form>
             </div>
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              className={classes.modal}
+              open={open}
+              onClose={handleClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+            >
+              <Fade in={open}>
+                <div
+                  className={classes.paper}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div style={{ padding: "30px" }}>
+                    <b>Thanks!</b> <br></br>We appreciate that you’ve taken the
+                    time to write us. We’ll get back to you very soon.
+                  </div>
+                </div>
+              </Fade>
+            </Modal>
           </div>
         </ThemeProvider>
       </Grid>
